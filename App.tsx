@@ -4,23 +4,23 @@ import {
   ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
   useColorScheme,
   View,
 } from 'react-native';
-
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import FearImage from './src/components/FearImage';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    // backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: 'white',
   };
 
   const styles = StyleSheet.create({
     container: {
-      backgroundColor: isDarkMode ? Colors.black : Colors.white,
+      // backgroundColor: isDarkMode ? Colors.black : Colors.white,
     },
   });
 
@@ -31,7 +31,7 @@ const App = () => {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <View style={styles.container}>
-          <Text>Hello world</Text>
+          <FearImage />
         </View>
       </ScrollView>
     </SafeAreaView>
